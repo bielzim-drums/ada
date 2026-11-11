@@ -1,0 +1,184 @@
+/* Página Sobre nós */
+.historia article {
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+.historia p {
+    font-size: 1.05rem;
+    color: var(--neve);
+}
+
+.grade-valores {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.valor {
+    background: var(--superficie);
+    border-radius: var(--raio);
+    padding: 1.8rem 1.4rem;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.valor .icone {
+    font-size: 2.6rem;
+}
+
+.valor h3 {
+    color: var(--vermelho);
+    font-size: 1.3rem;
+}
+
+body.noite .valor h3,
+body.noite .linha-tempo strong {
+    color: var(--dourado-claro);
+}
+
+.linha-tempo {
+    position: relative;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 0 0 2rem;
+    max-width: 760px;
+}
+
+.linha-tempo::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 4px;
+    background: repeating-linear-gradient(var(--dourado-claro) 0 14px, var(--neve) 14px 28px);
+}
+
+.linha-tempo li {
+    position: relative;
+    margin-bottom: 1.4rem;
+    padding: 1rem 1.2rem;
+    background: var(--superficie);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+.linha-tempo li::before {
+    content: "★";
+    position: absolute;
+    left: -2.15rem;
+    top: 0.9rem;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--dourado);
+    color: var(--neve);
+    text-align: center;
+    line-height: 26px;
+    font-size: 0.85rem;
+}
+
+.linha-tempo strong {
+    color: var(--vermelho);
+    font-size: 1.2rem;
+}
+
+.grade-equipe {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.membro {
+    text-align: center;
+    background: var(--superficie);
+    border-radius: var(--raio);
+    padding: 1.8rem 1.2rem;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.membro:hover {
+    transform: translateY(-6px);
+}
+
+.avatar-letra {
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    border: 5px solid var(--dourado);
+    font-family: var(--fonte-titulo);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--neve);
+    box-shadow: var(--sombra);
+}
+
+.avatar-1 {
+    background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+}
+
+.avatar-2 {
+    background: linear-gradient(135deg, var(--verde-claro), var(--verde));
+}
+
+.avatar-3 {
+    background: linear-gradient(135deg, #2C4A75, var(--noite));
+}
+
+.membro h3 {
+    margin-bottom: 0.2rem;
+}
+
+.membro .funcao {
+    color: var(--verde-texto);
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+}
+
+.contagem-area {
+    background: linear-gradient(135deg, var(--vermelho-escuro), var(--vermelho));
+    color: var(--neve);
+    border-radius: var(--raio);
+    padding: 2.4rem 1.2rem;
+    text-align: center;
+    box-shadow: var(--sombra-forte);
+    border: 2px solid var(--dourado);
+}
+
+.contagem-area h2 {
+    font-size: 2.4rem;
+    color: var(--dourado-claro);
+}
+
+.contagem {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.2rem 0;
+}
+
+.contagem div {
+    padding: 0.8rem 0.6rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.contagem span {
+    display: block;
+    font-weight: 800;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+}
+
+.contagem small {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}

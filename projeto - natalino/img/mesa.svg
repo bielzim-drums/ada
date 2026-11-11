@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <!-- Mesa de ceia: bolo tronco de chocolate, velas acesas, taças, pratos e ramos de pinheiro -->
+  <defs>
+    <radialGradient id="fundoM" cx="0.5" cy="0.4" r="0.8"><stop offset="0" stop-color="#3a1a18"/><stop offset="1" stop-color="#140808"/></radialGradient>
+    <linearGradient id="toalha" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B3202A"/><stop offset="1" stop-color="#6e1018"/></linearGradient>
+    <linearGradient id="trilho" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF6EA"/><stop offset="1" stop-color="#e6dbc0"/></linearGradient>
+    <linearGradient id="tronco" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b3b1f"/><stop offset="0.6" stop-color="#4a2512"/><stop offset="1" stop-color="#2e160a"/></linearGradient>
+    <radialGradient id="corte" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f3e3c3"/><stop offset="0.3" stop-color="#5a2e16"/><stop offset="0.55" stop-color="#f3e3c3"/><stop offset="0.8" stop-color="#5a2e16"/><stop offset="1" stop-color="#3a1c0c"/></radialGradient>
+    <linearGradient id="vela" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f6efe0"/><stop offset="0.5" stop-color="#ffffff"/><stop offset="1" stop-color="#e0d5bd"/></linearGradient>
+    <radialGradient id="chama" cx="0.5" cy="0.7" r="0.6"><stop offset="0" stop-color="#fffbe0"/><stop offset="0.5" stop-color="#ffd34e"/><stop offset="1" stop-color="#ff8a2a"/></radialGradient>
+    <radialGradient id="aura" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffd877" stop-opacity="0.55"/><stop offset="1" stop-color="#ffd877" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ouroM" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE9A0"/><stop offset="0.5" stop-color="#E9C95A"/><stop offset="1" stop-color="#A9811A"/></linearGradient>
+    <radialGradient id="prato" cx="0.5" cy="0.4" r="0.6"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d9dde4"/></radialGradient>
+    <linearGradient id="vidro" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.15"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.45"/><stop offset="1" stop-color="#ffffff" stop-opacity="0.15"/></linearGradient>
+    <filter id="sombraM" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#fundoM)"/>
+  <!-- bokeh de luzinhas ao fundo -->
+  <g opacity="0.5"><circle cx="970" cy="176" r="21" fill="#ff7a6b" opacity="0.32"/><circle cx="1101" cy="368" r="12" fill="#9be3b4" opacity="0.23"/><circle cx="297" cy="200" r="23" fill="#ffd877" opacity="0.43"/><circle cx="648" cy="268" r="33" fill="#ff7a6b" opacity="0.16"/><circle cx="860" cy="239" r="33" fill="#9be3b4" opacity="0.24"/><circle cx="156" cy="141" r="11" fill="#ffd877" opacity="0.40"/><circle cx="294" cy="198" r="27" fill="#9be3b4" opacity="0.20"/><circle cx="173" cy="235" r="15" fill="#ffd877" opacity="0.40"/><circle cx="948" cy="354" r="14" fill="#ffd877" opacity="0.16"/><circle cx="1199" cy="88" r="20" fill="#ff7a6b" opacity="0.40"/><circle cx="799" cy="250" r="22" fill="#ffd877" opacity="0.31"/><circle cx="304" cy="248" r="33" fill="#9be3b4" opacity="0.31"/><circle cx="1198" cy="291" r="26" fill="#ffd877" opacity="0.24"/><circle cx="1022" cy="110" r="10" fill="#ffd877" opacity="0.37"/><circle cx="306" cy="140" r="10" fill="#ffd877" opacity="0.43"/><circle cx="444" cy="257" r="18" fill="#ff7a6b" opacity="0.32"/><circle cx="35" cy="292" r="15" fill="#ffd877" opacity="0.21"/><circle cx="310" cy="340" r="21" fill="#9be3b4" opacity="0.32"/><circle cx="846" cy="66" r="27" fill="#ffd877" opacity="0.43"/><circle cx="71" cy="235" r="22" fill="#ffd877" opacity="0.26"/><circle cx="795" cy="345" r="18" fill="#ffd877" opacity="0.16"/><circle cx="1169" cy="146" r="21" fill="#9be3b4" opacity="0.28"/><circle cx="1174" cy="184" r="28" fill="#ffd877" opacity="0.41"/><circle cx="985" cy="271" r="15" fill="#9be3b4" opacity="0.26"/><circle cx="449" cy="378" r="29" fill="#ff7a6b" opacity="0.17"/><circle cx="142" cy="284" r="18" fill="#ffd877" opacity="0.16"/><circle cx="523" cy="173" r="33" fill="#ffd877" opacity="0.20"/><circle cx="36" cy="139" r="10" fill="#ffd877" opacity="0.33"/><circle cx="7" cy="190" r="12" fill="#9be3b4" opacity="0.36"/><circle cx="1065" cy="371" r="12" fill="#9be3b4" opacity="0.19"/></g>
+  <!-- mesa -->
+  <path d="M0 560 H1200 V900 H0Z" fill="url(#toalha)"/>
+  <path d="M0 560 H1200" stroke="#5a0c12" stroke-width="4"/>
+  <path d="M120 600 H1080 L1140 900 H60Z" fill="url(#trilho)" opacity="0.95"/>
+  <path d="M120 600 H1080" stroke="#E9C95A" stroke-width="4"/>
+  <circle cx="330" cy="400" r="90" fill="url(#aura)"/>
+    <rect x="316" y="430" width="28" height="140" rx="6" fill="url(#vela)"/>
+    <path d="M330 380 C 346 404, 340 426, 330 430 C 320 426, 314 404, 330 380Z" fill="url(#chama)"/>
+    <rect x="290" y="566" width="80" height="16" rx="8" fill="url(#ouroM)"/><circle cx="870" cy="400" r="90" fill="url(#aura)"/>
+    <rect x="856" y="430" width="28" height="140" rx="6" fill="url(#vela)"/>
+    <path d="M870 380 C 886 404, 880 426, 870 430 C 860 426, 854 404, 870 380Z" fill="url(#chama)"/>
+    <rect x="830" y="566" width="80" height="16" rx="8" fill="url(#ouroM)"/>
+  <!-- ramos de pinheiro -->
+  <g stroke="#1F5D3A" stroke-width="5" stroke-linecap="round">
+    <path d="M170 640 l40 -14 M170 640 l30 16 M190 636 l30 -20"/><path d="M250 640 l40 -14 M250 640 l30 16 M270 636 l30 -20"/><path d="M950 640 l-40 -14 M950 640 l-30 16 M930 636 l-30 -20"/><path d="M1030 640 l-40 -14 M1030 640 l-30 16 M1010 636 l-30 -20"/>
+  </g>
+  <g fill="#E3343F"><circle cx="210" cy="655" r="7"/><circle cx="224" cy="648" r="7"/><circle cx="990" cy="655" r="7"/><circle cx="976" cy="648" r="7"/></g>
+  <!-- bolo tronco -->
+  <g filter="url(#sombraM)">
+    <ellipse cx="600" cy="700" rx="270" ry="40" fill="url(#prato)"/>
+    <path d="M370 600 C 370 560, 400 545, 430 545 H770 C 800 545, 830 560, 830 600 V 660 C 830 690, 800 700, 770 700 H430 C 400 700, 370 690, 370 660Z" fill="url(#tronco)"/>
+    <g stroke="#2e160a" stroke-width="4" fill="none" opacity="0.6">
+      <path d="M430 570 C 520 585, 600 560, 700 580"/><path d="M420 620 C 520 640, 640 610, 760 630"/><path d="M450 670 C 540 680, 640 660, 740 676"/>
+    </g>
+    <ellipse cx="830" cy="622" rx="30" ry="76" fill="url(#corte)"/>
+    <path d="M560 545 C 560 520, 600 520, 600 545Z" fill="url(#tronco)"/>
+    <ellipse cx="580" cy="532" rx="18" ry="8" fill="url(#corte)"/>
+    <path d="M380 560 C 420 540, 500 552, 560 546 C 640 538, 720 548, 800 554 C 790 566, 740 568, 700 562 C 640 570, 560 566, 480 572 C 440 576, 400 574, 380 560Z" fill="#ffffff" opacity="0.9"/>
+    <g><path d="M470 545 C 470 525, 500 525, 500 545Z" fill="#e8e2d6"/><rect x="480" y="545" width="10" height="16" fill="#f5efe4"/>
+       <path d="M700 545 C 700 528, 726 528, 726 545Z" fill="#B3202A"/><rect x="709" y="545" width="8" height="14" fill="#f5efe4"/>
+       <circle cx="707" cy="537" r="2" fill="#fff"/><circle cx="717" cy="534" r="2" fill="#fff"/></g>
+    <path d="M620 540 l12 -24 l12 24 Z" fill="#2e7350"/><circle cx="632" cy="514" r="4" fill="#E9C95A"/>
+  </g>
+  <!-- taças com suco de uva -->
+  <g filter="url(#sombraM)">
+    <path d="M160 470 Q160 540 190 545 Q220 540 220 470Z" fill="#6b1030" opacity="0.85"/><path d="M158 450 Q158 545 190 548 Q222 545 222 450Z" fill="url(#vidro)" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/><rect x="187" y="546" width="6" height="56" fill="url(#vidro)"/><ellipse cx="190" cy="604" rx="26" ry="6" fill="url(#vidro)"/><path d="M980 470 Q980 540 1010 545 Q1040 540 1040 470Z" fill="#6b1030" opacity="0.85"/><path d="M978 450 Q978 545 1010 548 Q1042 545 1042 450Z" fill="url(#vidro)" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/><rect x="1007" y="546" width="6" height="56" fill="url(#vidro)"/><ellipse cx="1010" cy="604" rx="26" ry="6" fill="url(#vidro)"/>
+  </g>
+  <!-- pratos -->
+  <g>
+    <ellipse cx="200" cy="790" rx="130" ry="36" fill="url(#prato)"/><ellipse cx="200" cy="790" rx="92" ry="24" fill="none" stroke="#E9C95A" stroke-width="3"/>
+    <ellipse cx="1000" cy="790" rx="130" ry="36" fill="url(#prato)"/><ellipse cx="1000" cy="790" rx="92" ry="24" fill="none" stroke="#E9C95A" stroke-width="3"/>
+  </g>
+</svg>

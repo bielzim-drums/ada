@@ -1,0 +1,83 @@
+/* Variáveis: cores, fontes, medidas e cores do modo Noite de Natal */
+
+:root {
+    /* paleta natalina */
+    --vermelho: #B3202A;
+    --vermelho-escuro: #861620;
+    --verde: #1F5D3A;
+    --verde-claro: #3E8A5C;
+    --dourado: #C9A227;
+    --dourado-claro: #E9C95A;
+    --neve: #FFFFFF;
+    --creme: #FBF6EA;
+    --noite: #12263F;
+
+    /* cores "de papel": mudam no modo Noite de Natal */
+    --fundo: var(--creme);
+    --superficie: var(--neve);
+    --texto: var(--noite);
+    --texto-suave: #4D5B6E;
+    --borda: #EADFC6;
+    --borda-campo: #9C8A62;
+    /* borda dos campos do formulário (contraste mínimo 3:1) */
+    --verde-texto: #2E7350;
+    /* verde para textos pequenos: contraste 5,7:1 no branco */
+
+    /* fontes */
+    --fonte-titulo: "Mountains of Christmas", "Georgia", cursive;
+    --fonte-texto: "Nunito", "Segoe UI", sans-serif;
+
+    /* medidas */
+    --raio: 16px;
+    --espaco: 1rem;
+    --largura-max: 1200px;
+    --sombra: 0 1px 3px rgba(18, 38, 63, 0.08), 0 8px 24px rgba(18, 38, 63, 0.10);
+    --sombra-forte: 0 4px 10px rgba(18, 38, 63, 0.10), 0 18px 36px rgba(18, 38, 63, 0.20);
+}
+
+/* Noite de Natal (classe colocada no body pelo JS) */
+body.noite {
+    --fundo: #0E1D31;
+    --superficie: #17304F;
+    --texto: #F3EEE0;
+    --texto-suave: #B8C4D6;
+    --borda: #2A4468;
+    --borda-campo: #6E86A8;
+    --verde-texto: #8FD3A8;
+}/* Variáveis (cores, fontes e medidas) */
+:root {
+    --vermelho: #B3202A;
+    --vermelho-escuro: #861620;
+    --verde: #1F5D3A;
+    --verde-claro: #3E8A5C;
+    --dourado: #C9A227;
+    --dourado-claro: #E9C95A;
+    --neve: #FFFFFF;
+    --creme: #FBF6EA;
+    --noite: #12263F;
+    --fundo: var(--creme);
+    --superficie: var(--neve);
+    --texto: var(--noite);
+    --texto-suave: #4D5B6E;
+    --borda: #EADFC6;
+    --borda-campo: #9C8A62;
+    --verde-texto: #2E7350;
+    --fonte-titulo: "Mountains of Christmas", "Georgia", cursive;
+    --fonte-texto: "Nunito", "Segoe UI", sans-serif;
+    --raio: 16px;
+    --espaco: 1rem;
+    --largura-max: 1200px;
+    --sombra: 0 1px 3px rgba(18, 38, 63, 0.08), 0 8px 24px rgba(18, 38, 63, 0.10);
+    --sombra-forte: 0 4px 10px rgba(18, 38, 63, 0.10), 0 18px 36px rgba(18, 38, 63, 0.20);
+}
+
+/* Noite de Natal */
+body.noite {
+    --fundo: #0E1D31;
+    --superficie: #17304F;
+    --texto: #F3EEE0;
+    --texto-suave: #B8C4D6;
+    --borda: #2A4468;
+    --borda-campo: #6E86A8;
+    --verde-texto: #8FD3A8;
+}

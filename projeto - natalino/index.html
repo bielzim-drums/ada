@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Casa do Doce: confeitaria natalina com 50 doces de Natal: panetones, biscoitos, bolos, cestas e chocolates.">
+  <title>Casa do Doce | Home</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Nunito:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cabecalho.css">
+  <link rel="stylesheet" href="css/botoes.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/produtos.css">
+  <link rel="stylesheet" href="css/carrinho.css">
+  <link rel="stylesheet" href="css/sobre.css">
+  <link rel="stylesheet" href="css/galeria.css">
+  <link rel="stylesheet" href="css/contato.css">
+  <link rel="stylesheet" href="css/rodape.css">
+  <link rel="stylesheet" href="css/efeitos.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/login.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</head>
+
+<body>
+  <!-- Tema salvo (antes de desenhar, para não piscar) -->
+  <script>
+    if (localStorage.getItem("tema") === "noite") {
+      document.body.classList.add("noite");
+    }
+  </script>
+  <!-- Ícones (usados com <use>) -->
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="ic-lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+    </symbol>
+    <symbol id="ic-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+    </symbol>
+    <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </symbol>
+    <symbol id="ic-fechar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M6 6l12 12M18 6L6 18" />
+    </symbol>
+    <symbol id="ic-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="11" cy="11" r="7" />
+      <path d="M21 21l-4.3-4.3" />
+    </symbol>
+    <symbol id="ic-lixeira" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6" />
+    </symbol>
+    <symbol id="ic-musica" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M9 18V5l12-2v13" />
+      <circle cx="6" cy="18" r="3" />
+      <circle cx="18" cy="16" r="3" />
+    </symbol>
+    <symbol id="ic-carrinho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="20" r="1.5" />
+      <circle cx="18" cy="20" r="1.5" />
+      <path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6" />
+    </symbol>
+    <symbol id="ic-usuario" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21a8 8 0 0 1 16 0" />
+    </symbol>
+    <symbol id="ic-caminhao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1 4h13v12H1zM14 8h4l3 4v4h-7" />
+      <circle cx="5.5" cy="18.5" r="2" />
+      <circle cx="17.5" cy="18.5" r="2" />
+    </symbol>
+    <symbol id="ic-cartao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2" />
+      <path d="M2 10h20M6 15h4" />
+    </symbol>
+    <symbol id="ic-raio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M13 2L4 14h7l-1 8 9-12h-7z" />
+    </symbol>
+    <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6A8 8 0 1 1 21 12z" />
+    </symbol>
+    <symbol id="ic-alvo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1" />
+    </symbol>
+    <symbol id="ic-olho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="ic-coracao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z" />
+    </symbol>
+    <symbol id="ic-local" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </symbol>
+    <symbol id="ic-telefone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z" />
+    </symbol>
+    <symbol id="ic-email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="M22 6l-10 7L2 6" />
+    </symbol>
+    <symbol id="ic-relogio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </symbol>
+    <symbol id="ic-presente" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="8" width="18" height="4" rx="1" />
+      <path d="M5 12v9h14v-9M12 8v13M12 8S10.5 3 8 3.5 7 8 12 8zM12 8s1.5-5 4-4.5S17 8 12 8z" />
+    </symbol>
+    <symbol id="ic-arvore" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 2l5 7h-3l5 7H5l5-7H7z" />
+      <path d="M12 16v5" />
+    </symbol>
+    <symbol id="ic-topo" viewBox="0 0 24 24">
+      <path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="rede-instagram" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+    </symbol>
+    <symbol id="rede-facebook" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+    </symbol>
+    <symbol id="rede-youtube" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </symbol>
+    <symbol id="rede-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </symbol>
+  </svg>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="#inicio" class="logo">
+        <img src="img/logo.svg" alt="Logotipo da Casa do Doce: sino dourado com folhas de azevinho" width="48"
+          height="48">
+        <span>Casa do Doce</span>
+      </a>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal">
+        <a href="#inicio">Home</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="acoes">
+        <button class="btn-icone" id="btn-tema" aria-label="Ativar modo Noite de Natal">
+          <svg class="ic" aria-hidden="true">
+            <use href="#ic-lua" />
+          </svg>
+        </button>
+        <button class="btn-icone" id="btn-musica" aria-label="Tocar música de Natal">
+          <svg class="ic" aria-hidden="true">
+            <use href="#ic-musica" />
+          </svg>
+        </button>
+        <button class="btn-icone" id="btn-carrinho" aria-label="Abrir carrinho">
+          <svg class="ic" aria-hidden="true">
+            <use href="#ic-carrinho" />
+          </svg>
+          <span class="qtd-carrinho" id="qtd-carrinho">0</span>
+        </button>
+        <button class="btn-icone btn-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+          <svg class="ic" aria-hidden="true">
+            <use href="#ic-menu" />
+          </svg>
+        </button>
+        <a href="#entrar" class="cartao-login" id="btn-conta">
+          <span class="cartao-login-icone" aria-hidden="true">
+            <svg class="ic" aria-hidden="true">
+              <use href="#ic-usuario" />
+            </svg>
+          </span>
+          <span class="cartao-login-texto" id="btn-conta-texto">Fazer login</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="pagina" id="inicio" aria-label="Home">
+      <section class="hero" aria-labelledby="titulo-home">
+        <img class="hero-foto-musica" src="img/papai-noel-musica.jpg" alt="" aria-hidden="true">
+        <div class="hero-texto" data-velocidade="0.35">
+          <span class="chamada" id="faltam-dias">Contando os dias para o Natal...</span>
+          <h1 id="titulo-home">Casa do Doce</h1>
+          <p class="slogan">Cada mordida, um sininho tocando. Doces artesanais para deixar a sua ceia ainda mais mágica.
+          </p>
+          <div class="hero-botoes">
+            <a href="#produtos" class="btn btn-dourado btn-pulsar">Ver os 50 doces</a>
+            <a href="#ofertas" class="btn">Ofertas da semana</a>
+          </div>
+        </div>
+      </section>
+      <section class="secao" id="ofertas">
+        <div class="container">
+          <h2 class="titulo-secao revelar">Ofertas da semana</h2>
+          <p class="subtitulo-secao revelar">Promoções fresquinhas, saídas do forno direto para a sua mesa.</p>
+          <div class="slideshow revelar" aria-label="Promoções em destaque">
+            <div class="slide slide-1">
+              <div>
+                <span class="etiqueta">Mais vendido</span>
+                <h3>Panetone Trufado Estrela</h3>
+                <p>Massa de fermentação natural e creme trufado de chocolate meio amargo. Leve 2 e ganhe um cartão de
+                  Natal escrito à mão.</p>
+                <a href="#produtos?categoria=Panetones" class="btn btn-dourado">Ver panetones</a>
+              </div>
+              <img src="img/panetone-trufado-estrela.jpg"
+                alt="Panetone com uma fatia cortada num prato branco, diante de uma árvore de Natal iluminada"
+                width="800" height="800">
+            </div>
+            <div class="slide slide-2">
+              <div>
+                <span class="etiqueta">Diversão em família</span>
+                <h3>Casinha de Gengibre</h3>
+                <p>Paredes, telhado e glacê prontos para montar. A atividade favorita das crianças nas férias!</p>
+                <a href="#produtos?categoria=Biscoitos" class="btn btn-dourado">Ver biscoitos</a>
+              </div>
+              <img src="img/casinha-de-gengibre.jpg"
+                alt="Casinha de biscoito de gengibre com telhado de glacê branco e balas coloridas" width="800"
+                height="800" loading="lazy">
+            </div>
+            <div class="slide slide-3">
+              <div>
+                <span class="etiqueta">Noites geladas</span>
+                <h3>Chocolate Quente Cremoso</h3>
+                <p>Dez xícaras de puro aconchego. Combina com marshmallows de hortelã e uma boa história de Natal.</p>
+                <a href="#produtos?categoria=Chocolates%20e%20Bebidas" class="btn btn-dourado">Ver chocolates</a>
+              </div>
+              <img src="img/chocolate-quente-cremoso.jpg"
+                alt="Xícara de chocolate quente com chantilly e canela por cima" width="800" height="800"
+                loading="lazy">
+            </div>
+            <div class="slide slide-4">
+              <div>
+                <span class="etiqueta">Presente pronto</span>
+                <h3>Cesta Ceia Feliz</h3>
+                <p>Panetone, suco de uva integral, biscoitos e chocolates em uma cesta com laço. É só entregar!</p>
+                <a href="#produtos?categoria=Cestas%20e%20Kits" class="btn btn-dourado">Ver cestas</a>
+              </div>
+              <img src="img/cesta-ceia-feliz.jpg"
+                alt="Prato com biscoitos natalinos tchecos polvilhados de açúcar sobre uma toalha vermelha" width="800"
+                height="800" loading="lazy">
+            </div>
+            <button class="seta seta-anterior" id="anterior" aria-label="Slide anterior">‹</button>
+            <button class="seta seta-proximo" id="proximo" aria-label="Próximo slide">›</button>
+            <div class="indicadores" id="indicadores"></div>
+          </div>
+        </div>
+      </section>
+      <section class="secao secao-clara">
+        <div class="container">
+          <h2 class="titulo-secao revelar">Os favoritos do Papai Noel</h2>
+          <p class="subtitulo-secao revelar">Os doces mais pedidos nas cartinhas deste ano.</p>
+          <div id="lista-destaques" class="grade-produtos"></div>
+          <p class="centro">
+            <a href="#produtos" class="btn btn-contorno">Ver o catálogo completo</a>
+          </p>
+        </div>
+      </section>
+      <section class="secao">
+        <div class="container">
+          <h2 class="titulo-secao revelar">Escolha por categoria</h2>
+          <p class="subtitulo-secao revelar">Dez delícias em cada uma das nossas cinco prateleiras.</p>
+          <div class="grade-categorias">
+            <a class="categoria revelar" href="#produtos?categoria=Panetones">
+              <img src="img/panetone-classico-frutas.jpg" alt="" width="800" height="800" loading="lazy">
+              Panetones </a>
+            <a class="categoria revelar" href="#produtos?categoria=Biscoitos">
+              <img src="img/biscoito-bonequinho-gengibre.jpg" alt="" width="800" height="800" loading="lazy">
+              Biscoitos </a>
+            <a class="categoria revelar" href="#produtos?categoria=Bolos%20e%20Tortas">
+              <img src="img/bolo-tronco-de-natal.jpg" alt="" width="800" height="800" loading="lazy">
+              Bolos e Tortas </a>
+            <a class="categoria revelar" href="#produtos?categoria=Cestas%20e%20Kits">
+              <img src="img/kit-presente-sininho-dourado.jpg" alt="" width="800" height="800" loading="lazy">
+              Cestas e Kits </a>
+            <a class="categoria revelar" href="#produtos?categoria=Chocolates%20e%20Bebidas">
+              <img src="img/bombons-bolas-de-natal.jpg" alt="" width="800" height="800" loading="lazy">
+              Chocolates e Bebidas </a>
+          </div>
+        </div>
+      </section>
+      <section class="secao como-funciona">
+        <div class="container">
+          <p class="sobretitulo revelar">Como funciona</p>
+          <h2 class="revelar">Pedir um docinho é fácil assim</h2>
+          <p class="como-funciona-texto revelar">Três passos, do clique no site até o panetone chegar quentinho na sua
+            porta.</p>
+          <ol class="grade-passos">
+            <li class="passo revelar">
+              <span class="passo-numero">Passo 01</span>
+              <h3>Escolha os doces</h3>
+              <p>Use a busca e os filtros para achar o seu favorito entre as 50 delícias.</p>
+            </li>
+            <li class="passo revelar">
+              <span class="passo-numero">Passo 02</span>
+              <h3>Monte o carrinho</h3>
+              <p>Ajuste as quantidades e veja na hora quanto falta para ganhar a entrega grátis.</p>
+            </li>
+            <li class="passo revelar">
+              <span class="passo-numero">Passo 03</span>
+              <h3>Receba em casa</h3>
+              <p>Pague no Pix, no cartão ou em dinheiro e espere o sininho tocar na sua porta.</p>
+            </li>
+          </ol>
+          <p class="centro"><a href="#produtos" class="btn btn-dourado">Começar meu pedido</a></p>
+        </div>
+      </section>
+      <section class="faixa-parallax">
+        <h2 class="revelar">Encomendas para a ceia até 22/12</h2>
+        <p class="revelar">Reserve seu panetone, bolo ou cesta e retire quentinho na véspera. Os elfos da cozinha já
+          estão de avental!</p>
+        <a href="#contato" class="btn btn-dourado btn-pulsar">Fazer minha encomenda</a>
+      </section>
+      <section class="secao">
+        <div class="container grade-chamadas">
+          <article class="chamada-card revelar">
+            <h3>Nossa história</h3>
+            <p>Uma receita de família, um sino na porta da cozinha e mais de 25 Natais de tradição.</p>
+            <a href="#sobre" class="btn btn-contorno">Conhecer</a>
+          </article>
+          <article class="chamada-card revelar">
+            <h3>Galeria</h3>
+            <p>Espie os doces mais fotogênicos da temporada, do panetone trufado à casinha de gengibre.</p>
+            <a href="#galeria" class="btn btn-contorno">Ver fotos</a>
+          </article>
+          <article class="chamada-card revelar">
+            <h3>Fale conosco</h3>
+            <p>Encomendas especiais, cestas para empresas ou só um "Feliz Natal": a gente adora ler!</p>
+            <a href="#contato" class="btn btn-contorno">Enviar mensagem</a>
+          </article>
+        </div>
+      </section>
+    </section>
+    <section class="pagina" id="produtos" aria-label="Produtos">
+      <section class="topo-pagina">
+        <h2>Nossos produtos</h2>
+        <p>50 delícias natalinas feitas à mão. Use a busca ou escolha uma categoria para encontrar o seu doce favorito.
+        </p>
+      </section>
+      <section class="secao">
+        <div class="container">
+          <div class="filtros" role="search">
+            <div>
+              <label for="busca">Buscar pelo nome</label>
+              <input type="search" id="busca" placeholder="Ex.: panetone, gengibre, trufa..." autocomplete="off">
+            </div>
+            <div>
+              <label for="categoria">Categoria</label>
+              <select id="categoria">
+                <option value="todas">Todas</option>
+                <option value="Panetones">Panetones</option>
+                <option value="Biscoitos">Biscoitos</option>
+                <option value="Bolos e Tortas">Bolos e Tortas</option>
+                <option value="Cestas e Kits">Cestas e Kits</option>
+                <option value="Chocolates e Bebidas">Chocolates e Bebidas</option>
+              </select>
+            </div>
+            <div>
+              <label for="ordem">Ordenar por</label>
+              <select id="ordem">
+                <option value="padrao">Ordem do catálogo</option>
+                <option value="menor-preco">Menor preço</option>
+                <option value="maior-preco">Maior preço</option>
+                <option value="nome">Nome (A a Z)</option>
+              </select>
+            </div>
+          </div>
+          <p class="contador" id="contador" aria-live="polite">Mostrando 50 de 50 produtos</p>
+          <section id="lista-produtos" class="grade-produtos" aria-label="Lista de produtos"></section>
+        </div>
+      </section>
+    </section>
+    <section class="pagina" id="sobre" aria-label="Sobre nós">
+      <section class="topo-pagina">
+        <h2>Sobre nós</h2>
+        <p>Uma confeitaria que nasceu de uma receita de família e de um sininho pendurado na porta da cozinha.</p>
+      </section>
+      <section class="secao">
+        <div class="container historia">
+          <article class="revelar">
+            <h2 class="titulo-secao">Nossa história</h2>
+            <p>Tudo começou em 1998, na cozinha da Dona Celeste. Toda vez que uma fornada de panetones ficava pronta,
+              ela tocava um sininho dourado pendurado na porta, e a vizinhança inteira sabia: estava na hora de buscar o
+              seu!</p>
+            <p>O sininho virou apelido, o apelido virou nome e a cozinha virou fábrica. Hoje os netos da Dona Celeste
+              mantêm as mesmas receitas, com fermentação natural, especiarias moídas na hora e muito capricho em cada
+              laço de fita.</p>
+            <p>Neste Natal a Casa do Doce chega à internet com 50 doces para levar a magia da nossa cozinha até a sua
+              mesa.</p>
+          </article>
+        </div>
+      </section>
+      <section class="secao secao-clara">
+        <div class="container">
+          <h2 class="titulo-secao revelar">O que nos move</h2>
+          <div class="grade-valores">
+            <article class="valor revelar">
+              <span class="icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-alvo" />
+                </svg></span>
+              <h3>Missão</h3>
+              <p>Adoçar os encontros de fim de ano com doces artesanais, feitos com ingredientes de verdade e receitas
+                de família.</p>
+            </article>
+            <article class="valor revelar">
+              <span class="icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-olho" />
+                </svg></span>
+              <h3>Visão</h3>
+              <p>Ser a confeitaria lembrada sempre que alguém sentir o cheirinho de canela e panetone no ar.</p>
+            </article>
+            <article class="valor revelar">
+              <span class="icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-coracao" />
+                </svg></span>
+              <h3>Valores</h3>
+              <p>Carinho em cada detalhe, respeito a quem compra e a quem produz, generosidade e alegria de servir.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="secao">
+        <div class="container">
+          <h2 class="titulo-secao revelar">Linha do tempo</h2>
+          <ol class="linha-tempo">
+            <li class="revelar"><strong>1998</strong> · Dona Celeste assa os primeiros 40 panetones no forno de casa.
+            </li>
+            <li class="revelar"><strong>2005</strong> · Nasce a receita do Panetone Trufado Estrela, até hoje o mais
+              vendido.</li>
+            <li class="revelar"><strong>2014</strong> · Abrimos a lojinha de esquina na Vila Estrela Guia, com sino na
+              porta e tudo.</li>
+            <li class="revelar"><strong>2026</strong> · A Casa do Doce ganha sua loja virtual com 50 doces natalinos.
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="secao secao-clara">
+        <div class="container">
+          <h2 class="titulo-secao revelar">Nossa equipe</h2>
+          <p class="subtitulo-secao revelar">Os estudantes que criaram este site no Projeto AV2.</p>
+          <div class="grade-equipe">
+            <article class="membro revelar">
+              <span class="avatar-letra avatar-1" aria-hidden="true">M</span>
+              <h3>Miguel  Augusto</h3>
+              <p class="funcao">HTML, CSS </p>
+              <p>Criou as páginas, o menu, as cores, as animações e deixou tudo bonito no celular.</p>
+            </article>
+            <article class="membro revelar">
+              <span class="avatar-letra avatar-2" aria-hidden="true">J</span>
+              <h3>João Victor</h3>
+              <p class="funcao">JavaScripte e identidade visual</p>
+              <p>Programou os cards, o filtro, o slideshow, o parallax, os sons e o carrinho.</p>
+            </article>
+            <article class="membro revelar">
+              <span class="avatar-letra avatar-3" aria-hidden="true">G</span>
+              <h3>Gabriel Fideles</h3>
+              <p class="funcao">Produtos e conteúdo</p>
+              <p>Montou o catálogo com os 50 produtos, os textos, o LEIA-ME e a publicação no GitHub Pages.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="secao">
+        <div class="container">
+          <div class="contagem-area revelar">
+            <h2>Contagem regressiva para o Natal</h2>
+            <div class="contagem" aria-live="off">
+              <div><span id="dias">0</span><small>dias</small></div>
+              <div><span id="horas">00</span><small>horas</small></div>
+              <div><span id="minutos">00</span><small>minutos</small></div>
+              <div><span id="segundos">00</span><small>segundos</small></div>
+            </div>
+            <p id="mensagem-natal">Ainda dá tempo de encomendar os doces da sua ceia!</p>
+            <a href="#produtos" class="btn btn-dourado btn-pulsar">Escolher meus doces</a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="pagina" id="galeria" aria-label="Galeria">
+      <section class="topo-pagina">
+        <h2>Galeria</h2>
+        <p>Um passeio pela nossa loja e pelos doces mais fotogênicos da temporada. Clique em uma imagem para ampliar.
+        </p>
+      </section>
+      <section class="secao">
+        <div class="container">
+          <h2 class="visualmente-oculto">Fotos da Casa do Doce</h2>
+          <div class="grade-galeria">
+            <figure class="foto revelar">
+              <img src="img/galeria/panetone-trufado-estrela.jpg"
+                alt="Panetone com uma fatia cortada num prato branco, diante de uma árvore de Natal iluminada"
+                width="1200" height="900" loading="lazy">
+              <figcaption>Panetone Trufado Estrela</figcaption>
+              <button aria-label="Ampliar imagem: Panetone Trufado Estrela"></button>
+            </figure>
+            <figure class="foto revelar">
+              <img src="img/galeria/casinha-de-gengibre.jpg"
+                alt="Casinha de biscoito de gengibre com telhado de glacê branco e balas coloridas" width="1200"
+                height="900" loading="lazy">
+              <figcaption>Casinha de gengibre</figcaption>
+              <button aria-label="Ampliar imagem: Casinha de gengibre"></button>
+            </figure>
+            <figure class="foto revelar">
+              <img src="img/galeria/bolo-tronco-de-natal.jpg"
+                alt="Bolo tronco de chocolate decorado sobre uma tábua, com luzinhas de Natal ao fundo" width="1200"
+                height="900" loading="lazy">
+              <figcaption>Bolo Tronco de Natal</figcaption>
+              <button aria-label="Ampliar imagem: Bolo Tronco de Natal"></button>
+            </figure>
+            <figure class="foto revelar">
+              <img src="img/galeria/bolo-floresta-branca.jpg"
+                alt="Bolo coberto de chantilly com cerejas vermelhas e raspas de chocolate" width="1200" height="900"
+                loading="lazy">
+              <figcaption>Bolo Floresta Branca</figcaption>
+              <button aria-label="Ampliar imagem: Bolo Floresta Branca"></button>
+            </figure>
+            <figure class="foto revelar">
+              <img src="img/galeria/cesta-ceia-feliz.jpg"
+                alt="Prato com biscoitos natalinos tchecos polvilhados de açúcar sobre uma toalha vermelha" width="1200"
+                height="900" loading="lazy">
+              <figcaption>Cesta Ceia Feliz</figcaption>
+              <button aria-label="Ampliar imagem: Cesta Ceia Feliz"></button>
+            </figure>
+            <figure class="foto revelar">
+              <img src="img/galeria/meia-de-natal-recheada.jpg"
+                alt="Meias de Natal penduradas numa lareira acesa e enfeitada" width="1200" height="900" loading="lazy">
+              <figcaption>Meia recheada</figcaption>
+              <button aria-label="Ampliar imagem: Meia recheada"></button>
+            </figure>
+            <figure class="foto revelar">
+              <img src="img/galeria/calendario-do-advento.jpg"
+                alt="Calendário do advento em forma de casas antigas com janelinhas numeradas" width="1200" height="900"
+                loading="lazy">
+              <figcaption>Calendário do Advento</figcaption>
+              <button aria-label="Ampliar imagem: Calendário do Advento"></button>
+            </figure>
+            <figure class="foto revelar">
+              <img src="img/galeria/bombons-bolas-de-natal.jpg"
+                alt="Tigela cheia de bombons redondos embrulhados em papel verde e dourado" width="1200" height="900"
+                loading="lazy">
+              <figcaption>Bombons Bolas de Natal</figcaption>
+              <button aria-label="Ampliar imagem: Bombons Bolas de Natal"></button>
+            </figure>
+            <figure class="foto revelar">
+              <img src="img/galeria/pirulitos-floco-de-neve.jpg" alt="Dois pirulitos de chocolate num prato branco"
+                width="1200" height="900" loading="lazy">
+              <figcaption>Pirulitos Floco de Neve</figcaption>
+              <button aria-label="Ampliar imagem: Pirulitos Floco de Neve"></button>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="pagina" id="contato" aria-label="Contato">
+      <section class="topo-pagina">
+        <h2>Fale conosco</h2>
+        <p>Encomendas, dúvidas, elogios ou um simples "Feliz Natal". Os elfos respondem rapidinho!</p>
+      </section>
+      <section class="secao">
+        <div class="container grade-contato">
+          <form class="formulario revelar" id="form-contato" novalidate>
+            <h2>Envie sua mensagem</h2>
+            <div class="campo">
+              <label for="nome">Nome completo *</label>
+              <input id="nome" autocomplete="name" placeholder="Ex.: Maria Natalina" aria-describedby="erro-nome">
+              <span class="erro" id="erro-nome"></span>
+            </div>
+            <div class="campo">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" autocomplete="email" placeholder="nome@exemplo.com"
+                aria-describedby="erro-email">
+              <span class="erro" id="erro-email"></span>
+            </div>
+            <div class="campo">
+              <label for="assunto">Assunto *</label>
+              <select id="assunto" aria-describedby="erro-assunto">
+                <option value="">Selecione...</option>
+                <option value="encomenda">Encomenda para a ceia</option>
+                <option value="duvida">Dúvida sobre um produto</option>
+                <option value="empresas">Cestas para empresas</option>
+                <option value="elogio">Elogio ou sugestão</option>
+              </select>
+              <span class="erro" id="erro-assunto"></span>
+            </div>
+            <div class="campo">
+              <label for="mensagem">Mensagem *</label>
+              <textarea id="mensagem" rows="5" aria-describedby="erro-mensagem"
+                placeholder="Conte para a gente o que você precisa..."></textarea>
+              <span class="erro" id="erro-mensagem"></span>
+            </div>
+            <button type="submit" class="btn">Enviar mensagem</button>
+            <p class="mensagem-form" id="mensagem-form" role="status"></p>
+          </form>
+          <aside class="info-loja">
+            <div class="info-item revelar">
+              <span class="icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-local" />
+                </svg></span>
+              <div>
+                <h3>Endereço</h3>
+                <p>Rua dos Sinos, 2512 · Vila Estrela Guia<br>São Paulo · SP</p>
+              </div>
+            </div>
+            <div class="info-item revelar">
+              <span class="icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-telefone" />
+                </svg></span>
+              <div>
+                <h3>Telefone e WhatsApp</h3>
+                <p>(11) 0000-2512</p>
+              </div>
+            </div>
+            <div class="info-item revelar">
+              <span class="icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-email" />
+                </svg></span>
+              <div>
+                <h3>E-mail</h3>
+                <p>contato@casadodoce.exemplo</p>
+              </div>
+            </div>
+            <div class="info-item revelar">
+              <span class="icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-relogio" />
+                </svg></span>
+              <div class="cresce">
+                <h3>Horário de dezembro</h3>
+                <table class="horarios">
+                  <caption class="visualmente-oculto">Horário de funcionamento em dezembro</caption>
+                  <tr>
+                    <td>Segunda a quinta</td>
+                    <td>8h às 20h</td>
+                  </tr>
+                  <tr>
+                    <td>Sexta</td>
+                    <td>8h às 16h</td>
+                  </tr>
+                  <tr>
+                    <td>Domingo</td>
+                    <td>9h às 18h</td>
+                  </tr>
+                  <tr>
+                    <td>24/12</td>
+                    <td>8h às 14h</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="info-item revelar">
+              <span class="icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-chat" />
+                </svg></span>
+              <div>
+                <h3>Redes sociais</h3>
+                <p>@casadodoce.confeitaria</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </section>
+  </main>
+  <div class="modal" id="modal-produto" role="dialog" aria-modal="true" aria-labelledby="modal-nome">
+    <div class="modal-caixa">
+      <button class="btn-fechar" aria-label="Fechar detalhes">✕</button>
+      <img id="modal-imagem" src="img/logo.svg" alt="Imagem do produto" width="800" height="800">
+      <div class="modal-info">
+        <span class="card-categoria" id="modal-categoria">Categoria</span>
+        <h2 id="modal-nome">Produto</h2>
+        <p id="modal-descricao">Descrição</p>
+        <ul>
+          <li>Feito à mão na nossa cozinha</li>
+          <li>Embalagem de presente natalina inclusa</li>
+          <li>Entregas até 23 de dezembro</li>
+        </ul>
+        <strong class="preco" id="modal-preco">R$ 0,00</strong>
+        <button class="btn btn-comprar" id="modal-comprar">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <div class="modal-caixa">
+      <button class="btn-fechar" aria-label="Fechar imagem">✕</button>
+      <img id="lightbox-imagem" src="img/galeria/panetone-trufado-estrela.jpg" alt="Imagem ampliada da galeria"
+        width="1200" height="900">
+      <p class="legenda" id="lightbox-legenda"></p>
+      <button class="seta seta-anterior" id="foto-anterior" aria-label="Foto anterior">‹</button>
+      <button class="seta seta-proximo" id="foto-proxima" aria-label="Próxima foto">›</button>
+    </div>
+  </div>
+  <section class="faixa-vantagens" aria-label="Vantagens de comprar na Casa do Doce">
+    <div class="container grade-vantagens">
+      <div class="vantagem">
+        <span class="vantagem-icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+            <use href="#ic-caminhao" />
+          </svg></span>
+        <p><strong>Entrega na cidade</strong> grátis acima de R$ 150</p>
+      </div>
+      <div class="vantagem">
+        <span class="vantagem-icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+            <use href="#ic-cartao" />
+          </svg></span>
+        <p><strong>Até 3x sem juros</strong> em todos os cartões</p>
+      </div>
+      <div class="vantagem">
+        <span class="vantagem-icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+            <use href="#ic-raio" />
+          </svg></span>
+        <p><strong>Pague no Pix</strong> ou em dinheiro na entrega</p>
+      </div>
+      <div class="vantagem">
+        <span class="vantagem-icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+            <use href="#ic-chat" />
+          </svg></span>
+        <p><strong>Dúvidas?</strong> <a href="#contato">Fale com a gente</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="faixa-numeros" aria-label="A Casa do Doce em números">
+    <div class="container grade-numeros">
+      <div class="numero revelar"><strong>50</strong><span>doces artesanais</span></div>
+      <div class="numero revelar"><strong>5</strong><span>categorias de delícias</span></div>
+      <div class="numero revelar"><strong>25<em>+</em></strong><span>Natais de tradição</span></div>
+      <div class="numero revelar"><strong>4,9<em>★</em></strong><span>nota dos clientes</span></div>
+    </div>
+  </section>
+  <footer class="rodape">
+    <div class="container rodape-grade">
+      <section>
+        <h2>Casa do Doce</h2>
+        <p>Confeitaria natalina artesanal. Desde 1998 transformando açúcar, canela e carinho em memórias de Natal.</p>
+        <div class="redes" aria-label="Redes sociais">
+          <a class="rede rede-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener"
+            aria-label="Instagram da Casa do Doce" title="Instagram: @casadodoce.confeitaria">
+            <svg class="icone-rede" aria-hidden="true">
+              <use href="#rede-instagram" />
+            </svg>
+          </a>
+          <a class="rede rede-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener"
+            aria-label="Facebook da Casa do Doce" title="Facebook: /casadodoce">
+            <svg class="icone-rede" aria-hidden="true">
+              <use href="#rede-facebook" />
+            </svg>
+          </a>
+          <a class="rede rede-youtube" href="https://www.youtube.com/" target="_blank" rel="noopener"
+            aria-label="YouTube da Casa do Doce" title="YouTube: Casa do Doce Receitas">
+            <svg class="icone-rede" aria-hidden="true">
+              <use href="#rede-youtube" />
+            </svg>
+          </a>
+          <a class="rede rede-whatsapp" href="https://wa.me/551100002512" target="_blank" rel="noopener"
+            aria-label="WhatsApp da Casa do Doce" title="WhatsApp: (11) 0000-2512">
+            <svg class="icone-rede" aria-hidden="true">
+              <use href="#rede-whatsapp" />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section>
+        <h2>Navegue</h2>
+        <ul>
+          <li><a href="#inicio">Home</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Visite a fábrica</h2>
+        <address>
+          <svg class="ic" aria-hidden="true">
+            <use href="#ic-local" />
+          </svg> Rua dos Sinos, 2512 · Vila Estrela Guia<br>
+          São Paulo · SP<br>
+          <svg class="ic" aria-hidden="true">
+            <use href="#ic-telefone" />
+          </svg> (11) 0000-2512<br>
+          <svg class="ic" aria-hidden="true">
+            <use href="#ic-email" />
+          </svg> contato@casadodoce.exemplo
+        </address>
+      </section>
+    </div>
+    <div class="container rodape-final">
+      <p>&copy; 2026 · Colégio UNASP · Feito por Miguel, João Victor e Gabriel Fideles</p>
+    </div>
+  </footer>
+  <div class="fundo-escuro" id="fundo-escuro"></div>
+  <aside class="carrinho" id="carrinho" role="dialog" aria-modal="true" aria-labelledby="titulo-carrinho">
+    <div class="carrinho-topo">
+      <h2 id="titulo-carrinho">Seu carrinho</h2>
+      <button class="btn-fechar" id="fechar-carrinho" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <ul class="lista-carrinho" id="lista-carrinho"></ul>
+    <div class="carrinho-rodape">
+      <div class="frete-gratis" id="frete-gratis">
+        <p id="frete-texto">Faltam R$ 150,00 para ganhar entrega grátis</p>
+        <div class="frete-barra" aria-hidden="true"><span id="frete-progresso"></span></div>
+      </div>
+      <p class="resumo-linha"><span>Subtotal</span><span id="subtotal-carrinho">R$ 0,00</span></p>
+      <p class="resumo-linha"><span>Entrega</span><span id="entrega-carrinho">R$ 0,00</span></p>
+      <p class="total-linha"><span>Total</span><span id="total-carrinho">R$ 0,00</span></p>
+      <button class="btn btn-dourado btn-pulsar" id="finalizar-pedido">Finalizar pedido</button>
+      <p class="aviso-pedido" id="aviso-pedido" role="status"></p>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <a href="https://wa.me/551100002512" class="btn-whatsapp" target="_blank" rel="noopener"
+    aria-label="Conversar pelo WhatsApp" title="Conversar pelo WhatsApp">
+    <svg class="icone-whatsapp" aria-hidden="true">
+      <use href="#rede-whatsapp" />
+    </svg>
+  </a>
+  <button id="topo" aria-label="Voltar ao topo">
+    <svg class="icone-topo" aria-hidden="true">
+      <use href="#ic-topo" />
+    </svg>
+    <span>Topo</span>
+  </button>
+  <div class="tela-login" id="entrar" role="dialog" aria-modal="true" aria-labelledby="titulo-login">
+    <div class="entrar">
+      <button class="entrar-fechar" data-fechar-login aria-label="Fechar e voltar para a loja">&times;</button>
+      <div class="entrar-lado">
+        <div class="entrar-miolo">
+          <button class="entrar-logo" data-fechar-login aria-label="Casa do Doce: voltar para a loja">
+            <img src="img/logo.svg" alt="" width="36" height="36">
+            <span>Casa do Doce</span>
+          </button>
+          <div class="entrar-cartao" id="cartao-form">
+            <h2 class="entrar-titulo" id="titulo-login">Entrar na sua <span class="destaque">conta</span></h2>
+            <p class="entrar-sub" id="sub-login">Bem-vindo(a) de volta! Seus doces de Natal esperam por você.</p>
+            <form class="entrar-form" id="form-login" novalidate>
+              <div class="login-campo" id="campo-nome" hidden>
+                <label for="login-nome">Nome</label>
+                <input id="login-nome" autocomplete="given-name" placeholder="Como podemos te chamar?"
+                  aria-describedby="erro-login-nome">
+                <span class="login-erro" id="erro-login-nome" aria-live="polite"></span>
+              </div>
+              <div class="login-campo">
+                <label for="login-email">E-mail</label>
+                <input type="email" id="login-email" autocomplete="email" placeholder="voce@email.com"
+                  aria-describedby="erro-login-email">
+                <span class="login-erro" id="erro-login-email" aria-live="polite"></span>
+              </div>
+              <div class="login-campo">
+                <label for="login-senha">Senha</label>
+                <input type="password" id="login-senha" autocomplete="current-password"
+                  placeholder="Mínimo de 6 caracteres" aria-describedby="erro-login-senha">
+                <span class="login-erro" id="erro-login-senha" aria-live="polite"></span>
+              </div>
+              <div class="entrar-linha" id="linha-lembrar">
+                <label class="entrar-check" for="login-lembrar">
+                  <input type="checkbox" id="login-lembrar" checked> Lembrar de mim </label>
+                <button type="button" class="entrar-link" id="btn-esqueci">Esqueci minha senha</button>
+              </div>
+              <p class="login-mensagem" id="login-mensagem" role="status" hidden></p>
+              <button type="submit" class="btn btn-login" id="btn-enviar">Entrar</button>
+            </form>
+            <div class="entrar-ou" role="separator">ou</div>
+            <button class="entrar-visitante" data-fechar-login>
+              <span class="visitante-icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                  <use href="#ic-presente" />
+                </svg></span>
+              <span class="visitante-texto">
+                <strong>Entrar como visitante</strong>
+                <span>Só para olhar a vitrine. Para acompanhar pedidos, é preciso entrar.</span>
+              </span>
+              <span class="visitante-seta" aria-hidden="true">→</span>
+            </button>
+          </div>
+          <section class="entrar-cartao" id="login-conectado" hidden>
+            <span class="login-icone" aria-hidden="true"><svg class="ic" aria-hidden="true">
+                <use href="#ic-arvore" />
+              </svg></span>
+            <h2 class="entrar-titulo" id="login-ola">Olá!</h2>
+            <p class="entrar-sub" id="login-email-salvo"></p>
+            <button class="btn btn-login" data-fechar-login>Ir para a loja</button>
+            <button class="btn btn-sair" id="btn-sair">Sair da conta</button>
+          </section>
+          <p class="entrar-trocar" id="linha-trocar">
+            <span id="texto-trocar">Ainda não tem conta?</span>
+            <button class="entrar-link" id="btn-trocar">Criar conta</button>
+          </p>
+        </div>
+      </div>
+      <aside class="entrar-painel">
+        <span class="entrar-selo"><span class="selo-ponto" aria-hidden="true"></span>Casa do Doce · doces de
+          Natal</span>
+        <div class="painel-texto">
+          <p class="painel-titulo">Doces feitos com <span class="destaque">magia de Natal</span>, direto para a sua
+            ceia.</p>
+          <p class="painel-frase">Panetones, biscoitos, chocolates e cestas para presentear. Entre na conta para
+            acompanhar seus pedidos.</p>
+        </div>
+        <div class="painel-contagem">
+          <span class="contagem-numero" id="dias-natal">--</span>
+          <span class="contagem-texto">
+            <strong id="dias-texto">dias para o Natal</strong>
+            <span>Faça sua encomenda com antecedência e garanta os seus doces!</span>
+          </span>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <!-- Templates usados pelo JS -->
+  <template id="tpl-card">
+    <article class="card">
+      <span class="selo" hidden>★ Destaque</span>
+      <button class="card-imagem btn-detalhes" tabindex="-1">
+        <img src="" alt="" loading="lazy" width="800" height="800">
+      </button>
+      <div class="card-corpo">
+        <span class="card-categoria"></span>
+        <h3></h3>
+        <p></p>
+        <strong class="preco"></strong>
+        <small class="parcelas"></small>
+        <div class="card-botoes">
+          <button class="btn btn-comprar">Adicionar</button>
+          <button class="btn btn-contorno btn-detalhes">
+            <svg class="ic" aria-hidden="true">
+              <use href="#ic-lupa" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+  </template>
+  <template id="tpl-vazio">
+    <div class="mensagem-vazia">
+      <h3>Nenhum produto encontrado</h3>
+      <p>Os elfos procuraram na fábrica inteira! Tente outra palavra ou outra categoria.</p>
+    </div>
+  </template>
+  <template id="tpl-item-carrinho">
+    <li class="item-carrinho">
+      <img src="" alt="" width="64" height="64" loading="lazy">
+      <div>
+        <h3></h3>
+        <small></small>
+        <div class="quantidade">
+          <button data-acao="menos" aria-label="Diminuir quantidade">−</button>
+          <strong></strong>
+          <button data-acao="mais" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+      <button class="btn-remover" data-acao="remover">
+        <svg class="ic" aria-hidden="true">
+          <use href="#ic-lixeira" />
+        </svg>
+      </button>
+    </li>
+  </template>
+  <template id="tpl-carrinho-vazio">
+    <li class="carrinho-vazio">Seu carrinho está vazio.<br>Que tal um panetone?</li>
+  </template>
+  <template id="tpl-checkout">
+    <div class="checkout" id="checkout" role="dialog" aria-modal="true" aria-labelledby="ck-titulo">
+      <div class="ck-caixa">
+        <button class="ck-fechar" data-fechar aria-label="Fechar">&times;</button>
+        <h2 class="ck-titulo" id="ck-titulo" tabindex="-1">Finalizar o <span class="ck-destaque">pedido</span></h2>
+        <div class="ck-resumo">
+          <div>
+            <strong id="ck-resumo-titulo">Seu pedido</strong>
+            <span id="ck-resumo-itens"></span>
+            <span id="ck-resumo-entrega"></span>
+          </div>
+          <p class="ck-preco"><span id="ck-total">R$ 0,00</span><small>total</small></p>
+        </div>
+        <form id="ck-form" novalidate>
+          <div class="ck-grade">
+            <div class="ck-campo">
+              <label for="ck-nome">Nome completo *</label>
+              <input id="ck-nome" maxlength="120" autocomplete="name" placeholder="Seu nome">
+              <span class="ck-erro" aria-live="polite"></span>
+            </div>
+            <div class="ck-campo">
+              <label for="ck-email">E-mail *</label>
+              <input id="ck-email" type="email" maxlength="160" autocomplete="email" placeholder="voce@email.com">
+              <span class="ck-erro" aria-live="polite"></span>
+            </div>
+            <div class="ck-campo">
+              <label for="ck-cpf">CPF *</label>
+              <input id="ck-cpf" inputmode="numeric" maxlength="14" autocomplete="off" placeholder="000.000.000-00">
+              <span class="ck-erro" aria-live="polite"></span>
+            </div>
+            <div class="ck-campo">
+              <label for="ck-telefone">Telefone / WhatsApp</label>
+              <input id="ck-telefone" type="tel" maxlength="16" autocomplete="tel" placeholder="(11) 99999-9999">
+              <span class="ck-erro" aria-live="polite"></span>
+            </div>
+            <div class="ck-campo ck-largo">
+              <label for="ck-endereco">Endereço de entrega *</label>
+              <input id="ck-endereco" maxlength="160" autocomplete="street-address" placeholder="Rua, número e bairro">
+              <span class="ck-erro" aria-live="polite"></span>
+            </div>
+          </div>
+          <fieldset class="ck-formas">
+            <legend>Forma de pagamento *</legend>
+            <label class="ck-forma"><input type="radio" name="ck-pagamento" value="pix" checked><span>Pix</span></label>
+            <label class="ck-forma"><input type="radio" name="ck-pagamento" value="cartao"><span>Cartão</span></label>
+            <label class="ck-forma"><input type="radio" name="ck-pagamento" value="boleto"><span>Boleto</span></label>
+          </fieldset>
+          <div class="ck-pagpix" id="ck-pagpix">
+            <div class="ck-pix-qr-lado">
+              <div class="ck-qr" id="ck-qr" role="img" aria-label="QR Code do Pix"></div>
+              <p class="ck-pix-tempo">Expira em <strong id="ck-pix-tempo">10:00</strong></p>
+            </div>
+            <div class="ck-pix-info">
+              <p class="ck-pix-status"><span class="ck-pontinho" aria-hidden="true"></span> Aguardando pagamento</p>
+              <dl class="ck-pix-dados">
+                <div>
+                  <dt>Valor</dt>
+                  <dd id="ck-pix-valor">R$ 0,00</dd>
+                </div>
+                <div>
+                  <dt>Recebedor</dt>
+                  <dd>Casa do Doce</dd>
+                </div>
+                <div>
+                  <dt>Chave Pix</dt>
+                  <dd>natal-2512-doce</dd>
+                </div>
+              </dl>
+              <label class="ck-pix-rotulo" for="ck-pix-codigo">Pix copia e cola</label>
+              <div class="ck-copiar">
+                <input id="ck-pix-codigo" readonly>
+                <button type="button" class="btn btn-contorno" id="ck-pix-copiar">Copiar</button>
+              </div>
+              <ol class="ck-pix-passos">
+                <li>Abra o app do seu banco e escolha <strong>Pix</strong>.</li>
+                <li>Aponte a câmera para o QR Code ou cole o código.</li>
+                <li>Volte aqui e clique em <strong>Já fiz o Pix</strong>.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="ck-pagcartao" id="ck-pagcartao" hidden>
+            <div class="ck-palco">
+              <div class="ck-cartao" id="ck-cartao" aria-hidden="true">
+                <div class="ck-face ck-frente">
+                  <div class="ck-cartao-topo">
+                    <span class="ck-chip"></span>
+                    <span class="ck-marca">CASA DO DOCE</span>
+                  </div>
+                  <div class="ck-numero" id="ck-ver-numero">•••• •••• •••• ••••</div>
+                  <div class="ck-cartao-base">
+                    <div class="ck-info"><small>Titular</small><span id="ck-ver-nome">SEU NOME</span></div>
+                    <div class="ck-info"><small>Validade</small><span id="ck-ver-validade">MM/AA</span></div>
+                    <span class="ck-bandeira" id="ck-ver-bandeira"></span>
+                  </div>
+                </div>
+                <div class="ck-face ck-verso">
+                  <div class="ck-tarja"></div>
+                  <div class="ck-assinatura"><span></span><b id="ck-ver-cvv">•••</b></div>
+                  <p class="ck-letrinha">Código de segurança no verso do cartão</p>
+                </div>
+              </div>
+              <button class="ck-virar" type="button" id="ck-virar"><span id="ck-virar-texto">Ver verso</span></button>
+            </div>
+            <div class="ck-campos-cartao">
+              <div class="ck-campo">
+                <label for="ck-cc-nome">Nome impresso no cartão *</label>
+                <input id="ck-cc-nome" maxlength="26" autocomplete="off" placeholder="Como está no cartão">
+                <span class="ck-erro" aria-live="polite"></span>
+              </div>
+              <div class="ck-campo">
+                <label for="ck-cc-numero">Número do cartão *</label>
+                <input id="ck-cc-numero" inputmode="numeric" maxlength="19" autocomplete="off"
+                  placeholder="0000 0000 0000 0000">
+                <span class="ck-erro" aria-live="polite"></span>
+              </div>
+              <div class="ck-linha">
+                <div class="ck-campo">
+                  <label for="ck-cc-validade">Validade *</label>
+                  <input id="ck-cc-validade" inputmode="numeric" maxlength="5" autocomplete="off" placeholder="MM/AA">
+                  <span class="ck-erro" aria-live="polite"></span>
+                </div>
+                <div class="ck-campo">
+                  <label for="ck-cc-cvv">CVV *</label>
+                  <input id="ck-cc-cvv" type="password" inputmode="numeric" maxlength="3" autocomplete="off"
+                    placeholder="•••">
+                  <span class="ck-erro" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="ck-campo">
+                <label for="ck-parcelas">Parcelas</label>
+                <select id="ck-parcelas"></select>
+              </div>
+              <p class="ck-seguro">O número e o CVV são conferidos só no seu navegador e não são salvos.</p>
+            </div>
+          </div>
+          <div class="ck-campo">
+            <label class="ck-check" for="ck-termos">
+              <input type="checkbox" id="ck-termos">
+              <span>Li e aceito as condições de entrega da Casa do Doce.</span>
+            </label>
+            <span class="ck-erro" aria-live="polite"></span>
+          </div>
+          <p class="ck-nota" id="ck-nota"></p>
+          <button class="btn btn-dourado ck-enviar" type="submit" id="ck-enviar">Continuar para o pagamento</button>
+        </form>
+        <div class="ck-estado" id="ck-estado" role="status" aria-live="polite" hidden>
+          <div class="ck-estado-cartao" id="ck-estado-cartao"></div>
+          <span class="ck-girando" aria-hidden="true"></span>
+          <svg class="ck-visto" viewBox="0 0 52 52" aria-hidden="true">
+            <circle cx="26" cy="26" r="23" />
+            <path d="M15 27l7.5 7.5L37 19" />
+          </svg>
+          <p class="ck-estado-titulo" id="ck-estado-titulo">Processando pagamento seguro…</p>
+          <p class="ck-estado-texto" id="ck-estado-texto"></p>
+          <button class="btn btn-contorno" data-fechar id="ck-estado-fechar" hidden>Voltar para a loja</button>
+        </div>
+        <div class="ck-pronto" id="ck-pronto" hidden>
+          <p id="ck-pronto-texto"></p>
+          <div id="ck-pronto-extra"></div>
+          <button class="btn btn-contorno" data-fechar>Voltar para a loja</button>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="tpl-pix-comprovante">
+    <div class="ck-pix-comprovante">
+      <div class="ck-qr"></div>
+      <div><small>Pix para</small><strong>Casa do Doce</strong><span data-valor></span></div>
+    </div>
+  </template>
+</body>
+
+</html>

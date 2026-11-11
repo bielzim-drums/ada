@@ -1,0 +1,210 @@
+/* Carrinho, resumo do pedido e aviso (toast) */
+.fundo-escuro {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: rgba(8, 18, 32, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.fundo-escuro.aberto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrinho {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--superficie);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+    transform: translateX(105%);
+    visibility: hidden;
+    transition: transform 0.4s ease, visibility 0.4s;
+}
+
+.carrinho.aberto {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.4s ease, visibility 0s;
+}
+
+.carrinho-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    background: var(--vermelho);
+    color: var(--neve);
+}
+
+.carrinho-topo h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.carrinho-topo .btn-fechar {
+    position: static;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lista-carrinho {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 1.2rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.item-carrinho {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    gap: 0.8rem;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px dashed var(--borda);
+}
+
+.item-carrinho img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    object-fit: cover;
+    overflow: hidden;
+    background: var(--borda);
+}
+
+.item-carrinho h3 {
+    font-size: 0.95rem;
+    margin: 0 0 0.2rem;
+}
+
+.item-carrinho small {
+    color: var(--texto-suave);
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.3rem;
+}
+
+.quantidade button,
+.btn-remover {
+    width: 34px;
+    height: 34px;
+    border: 2px solid var(--borda-campo);
+    border-radius: 50%;
+    background: var(--fundo);
+    color: var(--texto);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.btn-remover {
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+}
+
+.carrinho-vazio {
+    text-align: center;
+    color: var(--texto-suave);
+    padding: 2rem 0;
+}
+
+.carrinho-rodape {
+    padding: 1rem 1.2rem 1.4rem;
+    border-top: 2px solid var(--borda);
+}
+
+/* Resumo do pedido */
+.frete-gratis {
+    margin-bottom: 0.8rem;
+    padding: 0.7rem 0.8rem;
+    border-radius: 12px;
+    background: var(--fundo);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.frete-gratis p {
+    margin: 0 0 0.4rem;
+}
+
+.frete-barra {
+    height: 8px;
+    border-radius: 99px;
+    background: var(--borda);
+    overflow: hidden;
+}
+
+/* a largura vem do JS */
+.frete-barra span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--verde-claro), var(--dourado));
+    transition: width 0.4s;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0.3rem;
+    color: var(--texto-suave);
+}
+
+.total-linha {
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--borda);
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.carrinho-rodape .btn {
+    width: 100%;
+}
+
+.aviso-pedido {
+    margin: 0.8rem 0 0;
+    text-align: center;
+    font-weight: 700;
+    color: var(--verde-texto);
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    z-index: 300;
+    width: max-content;
+    max-width: calc(100% - 2rem);
+    text-align: center;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    background: var(--verde);
+    color: var(--neve);
+    font-weight: 700;
+    box-shadow: var(--sombra-forte);
+    transform: translate(-50%, 200px);
+    visibility: hidden;
+    transition: transform 0.4s, visibility 0.4s;
+}
+
+.toast.visivel {
+    transform: translate(-50%, 0);
+    visibility: visible;
+}

@@ -1,0 +1,90 @@
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1.4rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--vermelho);
+    color: var(--neve);
+    font-family: var(--fonte-texto);
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+body.noite .btn {
+    color: var(--neve);
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: var(--vermelho-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(179, 32, 42, 0.35);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-dourado {
+    background: var(--dourado);
+    color: var(--noite);
+}
+
+body.noite .btn-dourado {
+    color: var(--noite);
+}
+
+.btn-dourado:hover,
+.btn-dourado:focus-visible {
+    background: var(--dourado-claro);
+}
+
+.btn-contorno {
+    background: transparent;
+    color: var(--vermelho);
+    border: 2px solid var(--vermelho);
+}
+
+body.noite .btn-contorno {
+    color: var(--dourado-claro);
+    border-color: var(--dourado-claro);
+}
+
+.btn-contorno:hover,
+.btn-contorno:focus-visible,
+body.noite .btn-contorno:hover,
+body.noite .btn-contorno:focus-visible {
+    background: var(--vermelho);
+    color: var(--neve);
+}
+
+/* fora dos cartões o contorno é branco */
+.centro>.btn-contorno,
+body.noite .centro>.btn-contorno {
+    color: var(--neve);
+    border-color: var(--neve);
+}
+
+.centro>.btn-contorno:hover,
+.centro>.btn-contorno:focus-visible,
+body.noite .centro>.btn-contorno:hover,
+body.noite .centro>.btn-contorno:focus-visible {
+    background: var(--neve);
+    color: var(--vermelho-escuro);
+}
+
+.btn-pulsar {
+    animation: pulsar 2s infinite;
+}
+
+:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 2px;
+}

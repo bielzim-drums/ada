@@ -1,0 +1,205 @@
+/* Rodapé, WhatsApp e voltar ao topo */
+.rodape {
+    position: relative;
+    margin-top: 3rem;
+    background: var(--noite);
+    color: #D9E1EC;
+    padding: 3.5rem 0 1.2rem;
+}
+
+.rodape::before {
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: radial-gradient(circle at 12px 24px, var(--noite) 12px, transparent 13px) repeat-x;
+    background-size: 24px 24px;
+}
+
+.faixa-numeros+.rodape {
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.faixa-numeros+.rodape::before {
+    display: none;
+}
+
+.rodape-grade {
+    display: grid;
+    gap: 2rem;
+}
+
+.rodape h2 {
+    font-size: 1.8rem;
+    color: var(--dourado-claro);
+    margin-bottom: 0.6rem;
+}
+
+.rodape a {
+    color: #D9E1EC;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: var(--dourado-claro);
+    text-decoration: underline;
+}
+
+.rodape address {
+    font-style: normal;
+}
+
+.rodape ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape li {
+    margin-bottom: 0.4rem;
+}
+
+.redes {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+/* body.noite junto para vencer "body.noite a" */
+.rede,
+body.noite .rede {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: var(--neve);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rede:hover,
+.rede:focus-visible {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.icone-rede,
+.icone-topo {
+    width: 22px;
+    height: 22px;
+}
+
+.rede-instagram {
+    background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FD5949 45%, #D6249F 60%, #285AEB 90%);
+}
+
+.rede-facebook {
+    background: #1877F2;
+}
+
+.rede-youtube {
+    background: #FF0000;
+}
+
+.rede-whatsapp {
+    background: #25D366;
+}
+
+.rodape-final {
+    margin-top: 2.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9FB0C6;
+}
+
+.rodape-final p {
+    margin: 0.2rem 0;
+}
+
+#topo {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 60;
+    width: 56px;
+    height: 56px;
+    border: 3px solid var(--neve);
+    border-radius: 50%;
+    background: var(--vermelho);
+    color: var(--neve);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    font-family: var(--fonte-texto);
+    font-size: 0.62rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: var(--sombra-forte);
+    display: none;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+#topo:hover,
+#topo:focus-visible {
+    background: var(--vermelho-escuro);
+}
+
+.btn-whatsapp,
+body.noite .btn-whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 86px;
+    z-index: 60;
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    color: var(--neve);
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+    transform: scale(1.1);
+}
+
+.icone-whatsapp {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-whatsapp::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid #25D366;
+    animation: onda-whatsapp 2s ease-out infinite;
+}
+
+@keyframes onda-whatsapp {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

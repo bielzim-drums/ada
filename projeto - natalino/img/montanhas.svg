@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- Montanhas nevadas em duas camadas (a de trás mais clara, como se tivesse névoa) -->
+  <defs>
+    <linearGradient id="serraLonge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b7aa6"/><stop offset="1" stop-color="#2c4a75"/>
+    </linearGradient>
+    <linearGradient id="serraPerto" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3e5f8c"/><stop offset="1" stop-color="#1a3358"/>
+    </linearGradient>
+    <linearGradient id="neveTopo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c8d8ef"/>
+    </linearGradient>
+    <linearGradient id="nevoa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fb7d8" stop-opacity="0"/><stop offset="1" stop-color="#9fb7d8" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <path d="M0 900 L0 640 L83 505 L150 340 L261 490 L382 474 L480 270 L555 455 L735 514 L820 360 L907 500 L1037 464 L1130 250 L1237 445 L1385 496 L1450 320 L1512 480 L1600 640 L1600 900Z" fill="url(#serraLonge)"/>
+  <path d="M150 340 L108 392 L128 384 L144 400 L162 386 L180 398 L198 390Z M480 270 L438 322 L458 314 L474 330 L492 316 L510 328 L528 320Z M820 360 L778 412 L798 404 L814 420 L832 406 L850 418 L868 410Z M1130 250 L1088 302 L1108 294 L1124 310 L1142 296 L1160 308 L1178 300Z M1450 320 L1408 372 L1428 364 L1444 380 L1462 366 L1480 378 L1498 370Z" fill="url(#neveTopo)" opacity="0.85"/>
+  <rect y="520" width="1600" height="200" fill="url(#nevoa)"/>
+  <path d="M0 900 L0 720 L-88 621 L20 500 L137 610 L267 608 L330 470 L395 595 L548 585 L650 420 L754 570 L887 616 L980 490 L1058 605 L1200 594 L1290 440 L1386 580 L1491 612 L1580 480 L1650 600 L1600 720 L1600 900Z" fill="url(#serraPerto)"/>
+  <path d="M20 500 L-22 552 L-2 544 L14 560 L32 546 L50 558 L68 550Z M330 470 L288 522 L308 514 L324 530 L342 516 L360 528 L378 520Z M650 420 L608 472 L628 464 L644 480 L662 466 L680 478 L698 470Z M980 490 L938 542 L958 534 L974 550 L992 536 L1010 548 L1028 540Z M1290 440 L1248 492 L1268 484 L1284 500 L1302 486 L1320 498 L1338 490Z M1580 480 L1538 532 L1558 524 L1574 540 L1592 526 L1610 538 L1628 530Z" fill="url(#neveTopo)"/>
+  <rect y="640" width="1600" height="260" fill="url(#nevoa)"/>
+</svg>

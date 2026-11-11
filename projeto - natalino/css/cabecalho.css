@@ -1,0 +1,210 @@
+/* Cabeçalho, menu e botões do topo */
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--verde);
+    color: var(--neve);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.logo img {
+    transition: transform 0.4s;
+}
+
+.logo:hover img {
+    animation: balancar 0.8s ease-in-out;
+}
+
+.logo span {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    color: var(--dourado-claro);
+    white-space: nowrap;
+}
+
+.menu {
+    gap: clamp(0.3rem, 0.8vw, 0.7rem);
+}
+
+.menu a,
+body.noite .menu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 0.7rem clamp(0.4rem, 1vw, 0.9rem);
+    border: 1px solid rgba(233, 201, 90, 0.22);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--neve);
+    font-weight: 700;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(233, 201, 90, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.menu a.ativo,
+body.noite .menu a.ativo {
+    background: linear-gradient(180deg, var(--dourado-claro), var(--dourado));
+    border-color: var(--dourado-claro);
+    color: var(--noite);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.acoes {
+    display: flex;
+    gap: 0.4rem;
+}
+
+/* Botões do topo: bolinhas de Natal */
+.btn-icone {
+    --bola: var(--vermelho);
+    --bola-escura: #5E0E15;
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin-top: 6px;
+    border: 2px solid rgba(233, 201, 90, 0.75);
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.85) 0 7%, rgba(255, 255, 255, 0) 24%), radial-gradient(circle at 40% 35%, var(--bola) 0%, var(--bola-escura) 100%);
+    box-shadow: inset -3px -5px 8px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.35);
+    color: var(--neve);
+    cursor: pointer;
+    transform-origin: 50% -10px;
+    transition: box-shadow 0.3s, filter 0.3s;
+}
+
+.btn-icone::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 14px;
+    height: 7px;
+    transform: translateX(-50%);
+    border-radius: 3px 3px 1px 1px;
+    background: linear-gradient(90deg, #A8841C, var(--dourado-claro), #A8841C);
+}
+
+.btn-icone::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    transform: translateX(-50%);
+    border: 2px solid var(--dourado-claro);
+    border-radius: 50%;
+}
+
+#btn-tema {
+    --bola: #2B5C9E;
+    --bola-escura: #0E2346;
+}
+
+#btn-musica {
+    --bola: var(--verde-claro);
+    --bola-escura: #0C3320;
+}
+
+#btn-carrinho {
+    --bola: #D4303A;
+}
+
+.btn-menu {
+    --bola: var(--dourado);
+    --bola-escura: #6B520D;
+}
+
+.btn-icone:hover,
+.btn-icone:focus-visible {
+    animation: balancar 0.9s ease-in-out;
+    filter: brightness(1.15);
+    box-shadow: inset -3px -5px 8px rgba(0, 0, 0, 0.3), 0 0 16px rgba(233, 201, 90, 0.7);
+}
+
+.btn-icone.tocando {
+    --bola: var(--dourado-claro);
+    --bola-escura: #8A6A12;
+    color: var(--noite);
+    animation: pulsar 1.6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .menu a:hover,
+    .menu a:focus-visible {
+        transform: none;
+    }
+
+    .btn-icone:hover,
+    .btn-icone:focus-visible {
+        animation: none;
+    }
+}
+
+.qtd-carrinho {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+    border-radius: 11px;
+    border: 2px solid var(--dourado);
+    background: var(--neve);
+    color: var(--vermelho);
+    line-height: 18px;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.qtd-carrinho.pulo {
+    animation: pulo 0.5s;
+}
+
+/* Cabeçalho das páginas internas */
+.topo-pagina {
+    background: linear-gradient(rgba(18, 38, 63, 0.5), rgba(18, 38, 63, 0.5)), url("../img/estrelas.svg") center / cover, var(--noite);
+    color: var(--neve);
+    text-align: center;
+    padding: 3.5rem var(--espaco) 3rem;
+}
+
+.topo-pagina h2 {
+    color: var(--dourado-claro);
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.topo-pagina p {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}

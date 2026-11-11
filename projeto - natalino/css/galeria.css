@@ -1,0 +1,79 @@
+/* Página Galeria e lightbox */
+.grade-galeria {
+    display: grid;
+    gap: 1rem;
+}
+
+.foto {
+    margin: 0;
+    position: relative;
+    border-radius: var(--raio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    cursor: zoom-in;
+    background: var(--superficie);
+}
+
+.foto img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.foto:hover img,
+.foto:focus-within img {
+    transform: scale(1.08);
+    filter: brightness(0.8);
+}
+
+.foto figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem 1rem 0.8rem;
+    background: linear-gradient(transparent, rgba(8, 18, 32, 0.85));
+    color: var(--neve);
+    font-weight: 700;
+}
+
+.foto button {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.foto button:focus-visible {
+    outline-offset: -5px;
+    border-radius: var(--raio);
+}
+
+.lightbox .modal-caixa {
+    max-width: 960px;
+    display: block;
+    background: var(--noite);
+    color: var(--neve);
+}
+
+.lightbox img {
+    width: 100%;
+    max-height: 68vh;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: #0b1830;
+}
+
+.lightbox .legenda {
+    margin: 0;
+    padding: 0.9rem 4rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.lightbox .seta {
+    top: 45%;
+}
